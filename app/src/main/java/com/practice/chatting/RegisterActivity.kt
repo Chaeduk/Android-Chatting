@@ -11,6 +11,8 @@ import android.util.Log
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
 import kotlinx.android.synthetic.main.activity_main.*
@@ -78,8 +80,24 @@ class RegisterActivity : AppCompatActivity() {
         ref.putFile(selectedPhotoUri!!)
             .addOnSuccessListener { task->
                 Log.d("Register", "Success")
+                ref.downloadUrl.addOnSuccessListener {
+                    saveUserToFirebaseDatabase(it.toString())
+                }
             }
     }
 
+    private fun saveUserToFirebaseDatabase(profileImageUrl: String){
+        val uid = FirebaseAuth.getInstance().uid ?: ""
+        val database = Firebase.database
+        val ref = database.getReference("/users/$uid")
 
+        val user = User(uid, username_edittext_register.text.toString(), profileImageUrl)
+
+        ref.setValue(user)
+            .addOnSuccessListener {
+                Log.d("Register", "Finally Success")
+            }
+    }
 }
+
+class User(val uid: String, val username: String, val profileImageUrl: String)
