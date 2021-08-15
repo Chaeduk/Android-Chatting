@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "67688476669",
+    "project_id": "my-project-1627772301335",
+    "storage_bucket": "my-project-1627772301335.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67688476669:android:367ed89a036dc558267394",
+        "android_client_info": {
+          "package_name": "com.practice.chatting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "67688476669-4pkqvukv6q1ak0tsr0v79hof7vu406fo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn9aIiIr_nT0Vw7e8SSc8xLqSKtJQNRsA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "67688476669-4pkqvukv6q1ak0tsr0v79hof7vu406fo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67688476669:android:ff08418f57dca8ad267394",
+        "android_client_info": {
+          "package_name": "com.summer.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "67688476669-4pkqvukv6q1ak0tsr0v79hof7vu406fo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn9aIiIr_nT0Vw7e8SSc8xLqSKtJQNRsA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "67688476669-4pkqvukv6q1ak0tsr0v79hof7vu406fo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
