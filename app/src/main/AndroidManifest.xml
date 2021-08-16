@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Chatting">
-        <activity android:name=".NewMessageActivity"></activity>
+        <activity android:name=".ChatLogActivity"></activity>
+        <activity android:name=".NewMessageActivity" />
         <activity android:name=".LatestMessageActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity">
