@@ -96,6 +96,9 @@ class RegisterActivity : AppCompatActivity() {
         ref.setValue(user)
             .addOnSuccessListener {
                 Log.d("Register", "Finally Success")
+
+                val intent = Intent(this, LatestMessageActivity::class.java)
+                startActivity(intent)
             }
     }
 }
