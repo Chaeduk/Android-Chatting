@@ -6,6 +6,7 @@ import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Parcelable
 import android.provider.MediaStore
 import android.util.Log
 import android.widget.Toast
@@ -15,6 +16,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
+import kotlinx.android.parcel.Parcelize
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -103,4 +105,7 @@ class RegisterActivity : AppCompatActivity() {
     }
 }
 
-class User(val uid: String = "", val username: String = "", val profileImageUrl: String = "")
+@Parcelize
+class User(val uid: String, val username: String, val profileImageUrl: String) : Parcelable{
+    constructor() : this("","","")
+}
